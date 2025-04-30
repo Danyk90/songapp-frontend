@@ -1,0 +1,17 @@
+<div class="song-list-container">
+  <div class="song-grid">
+    <div *ngFor="let song of songs" class="song-card">
+      <div class="song-info">
+        <h3>{{ song.title }}</h3>
+        <p class="artist">{{ song.artist }}</p>
+        <p class="album">{{ song.album }}</p>
+        <p class="year">Released: {{ song.year }}</p>
+        <p class="duration">{{ formatDuration(song.duration) }}</p>
+      </div>
+      <button class="play-button" (click)="playSong(song)">
+        <i class="play-icon">▶</i>
+      </button>
+    </div>
+  </div>
+</div>
+
